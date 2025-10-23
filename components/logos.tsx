@@ -1,29 +1,29 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import { motion } from 'framer-motion'
-import { fadeUp } from '@/lib/motion'
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { fadeUp } from "@/lib/motion";
 
 interface LogosProps {
-  title?: string
-  subtitle?: string
+  title?: string;
+  subtitle?: string;
   logos: Array<{
-    name: string
-    src: string
-    width?: number
-    height?: number
-  }>
+    name: string;
+    src: string;
+    width?: number;
+    height?: number;
+  }>;
 }
 
-export function Logos({ 
+export function Logos({
   title = "Trusted by industry leaders",
   subtitle = "Join 500+ companies already transforming their business",
-  logos 
+  logos,
 }: LogosProps) {
   return (
     <section className="py-16 lg:py-24">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+        <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
@@ -34,7 +34,7 @@ export function Logos({
           <p className="text-muted-foreground">{subtitle}</p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
@@ -62,5 +62,5 @@ export function Logos({
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

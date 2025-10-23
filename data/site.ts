@@ -25,7 +25,7 @@ export const SITE_DATA = {
       text: "Watch Demo",
       href: "#demo",
     },
-    image: "/hero-placeholder.jpg",
+    image: "/hero-placeholder.webp",
   },
   kpi: {
     items: [
